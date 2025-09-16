@@ -9,7 +9,7 @@
 
 ## 🧭 Sobre este proyecto
 
-Este repositorio es **mi portfolio personal**, basado en el proyecto [midudev/porfolio.dev](https://github.com/midudev/porfolio.dev) :contentReference[oaicite:0]{index=0}.  
+Este repositorio es **mi portfolio personal**, basado en el proyecto [midudev/porfolio.dev](https://github.com/midudev/porfolio.dev)
 
 Lo personalicé para reflejar mi perfil profesional, mis habilidades, mi marca personal, y para mostrar mis proyectos con estilo propio.
 
@@ -32,8 +32,8 @@ A continuación lo que cambié o añadí respecto al template original:
 
 Estas son las tecnologías y herramientas usadas en este proyecto:
 
-- **Framework principal:** Astro :contentReference[oaicite:1]{index=1}  
-- **Estilos / UI:** Tailwind CSS :contentReference[oaicite:2]{index=2}  
+- **Framework principal:** Astro 
+- **Estilos / UI:** Tailwind CSS  
 - **Lenguaje / Scripting:** JavaScript  
 - **Gestor de paquetes:** npm
 - **Construcción / Deployment:** Netlify
@@ -89,6 +89,6 @@ pnpm preview        # o npm run preview
 
 ## 📄 Licencia
 
-Este proyecto está bajo la licencia **MIT** (igual que el original) ([GitHub][1]).
+Este proyecto está bajo la licencia **MIT**
 
 ---
