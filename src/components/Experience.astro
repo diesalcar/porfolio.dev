@@ -1,0 +1,84 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+
+const EXPERIENCE = [
+  {
+    date: "Agosto 2025 - Actualidad",
+    title: "Associate Technical",
+    company: "Quintas Energy",
+    description:
+      "Gestión y supervisión técnica de instalaciones de energía renovable. Responsable del seguimiento de incidencias, elaboración de informes de rendimiento y análisis económico a través de la plataforma QE Connect.",
+  },
+  {
+    date: "Marzo 2025 - Julio 2025",
+    title: "Full-stack Developer",
+    company: "VoltEdge",
+    description:
+      "Desarrollo y optimización de aplicaciones web para monitorización energética. Implementación de componentes, optimización de bases de datos y creación de documentación técnica.",
+  },
+  {
+    date: "Mayo 2024 - Noviembre 2024",
+    title: "Técnico de Asistencia Técnica Post-Venta",
+    company: "Quantica Renovables",
+    description:
+      "Soporte técnico y gestión de incidencias en instalaciones de energía renovable. Coordinación con clientes, fabricantes y distribuidores para la resolución efectiva de problemas técnicos.",
+  },
+  {
+    date: "Marzo 2022 - Febrero 2023",
+    title: "Técnico de proyectos AT",
+    company: "IPLAN GESTIÓN INTEGRAL S.L.",
+    description:
+      "Gestión de accesos para plantas de generación renovable en E-distribución zona SUR. Coordinación entre promotores y distribuidora mediante Salesforce y SAP.",
+  },
+  {
+    date: "Junio 2021 - Diciembre 2021",
+    title: "Técnico de instrumentación y control",
+    company: "DOMINION GLOBAL",
+    description:
+      "Mantenimiento predictivo y control de sistemas de instrumentación en Planta Termosolar Arenales (50 MW). Supervisión de equipos de medición y control para la operación óptima de la planta.",
+  },
+  {
+    date: "Marzo 2021 - Junio 2021",
+    title: "Técnico de mantenimiento",
+    company: "DOMINION GLOBAL",
+    description:
+      "Mantenimiento general y verificación de sistemas eléctricos en Planta Termosolar Arenales. Responsable de tareas críticas para la operación continua de la instalación.",
+  }
+]
+// separar las últimas 2 y el resto
+const lastExperiences = EXPERIENCE.slice(0, 2)
+const otherExperiences = EXPERIENCE.slice(2)
+---
+
+<ol class="relative mt-16">
+  {
+    lastExperiences.map((experience) => (
+      <li>
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
+
+{otherExperiences.length > 0 && (
+  <>
+    <button
+      id="see-more-btn"
+      class="mt-6 px-4 py-2 rounded bg-gray-200 hover:bg-gray-300"
+      onclick="document.getElementById('all-experiences').classList.remove('hidden'); this.classList.add('hidden');"
+    >
+      See more
+    </button>
+
+    <ol id="all-experiences" class="hidden relative mt-6">
+      {
+        otherExperiences.map((experience) => (
+          <li>
+            <ExperienceItem {...experience} />
+          </li>
+        ))
+      }
+    </ol>
+  </>
+)}
